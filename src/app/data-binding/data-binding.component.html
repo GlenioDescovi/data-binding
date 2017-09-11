@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!--<section class="property-binding">
+  <article>
+    <h3>Interpolação</h3> 
+    <p>String renderizada com a interpolação: {{ url }}</p>
+    <p>Resultado de 1+1= {{ 1+1}}</p>
+    <p>Resultado de 1+1 não é {{ 1+1 + getValor()}}</p>
+    <p>Curso de angular e gosto do curso: {{ cursoAngular && getCurtirCurso()}}</p>
+  </article>
+
+  <article>
+    <h3>Property Binding</h3>
+    <img src="{{ urlImagem }}" >
+    
+    Ou a propria chamada da variavel
+    <img [src]="urlImagem">
+    
+  </article>
+</section>-->
+
+<!--<article>
+  <h3>Class e style binding</h3>
+  <div>
+    Selecione uma classe:
+    <select #classe (change)="0">
+      <option value="alert-success">Sucesso</option>
+      <option value="alert-info">Info</option>
+      <option value="alert-warning">Alert</option>
+      <option value="alert-danger">Danger</option>
+    </select>
+    <br>
+
+    <div class="alert" [class.alert-success]="classe.value=='alert-success'" role="alert">sucesso</div>
+    <div class="alert" [class.alert-info]="classe.value=='alert-info'" role="alert">Info</div>
+    <div class="alert" [class.alert-warning]="classe.value=='alert-warning'" role="alert">alerta</div>
+    <div class="alert" [class.alert-danger]="classe.value=='alert-danger'" role="alert">erro</div>
+    <br>
+    <br>
+
+  <div class="alert {{ classe.value }}" role="alert">
+    <p>Texto colorido conforme o valor do combobox</p>
+  </div>
+  <br>
+  <div class="alert alert-danger" role="alert" [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+    <p>esse texto so aparece em caso de erro.</p>
+    
+  </div>
+
+</div>
+</article>
+  </section>
+-->
+
+<!--<section class="event-binding">
+  
+  <article>
+    <h3>Event Binding</h3>
+    <div>
+      <button (click)="botaoClicado()" class="btn btn-primary">Me click</button>
+      
+      <br><br>
+      
+      <input type="text" (keyup)="onkeyUp($event)" 
+      (keyup.enter)="salvarValor($event.target.value)"
+      (blur)="salvarValor($event.target.value)"/>
+
+      <p>Valor Atual= {{ valorAtual}}</p>
+      <p>Valor salvo= {{ valorSalvo}}</p>
+    </div>  
+    <span (mouseover)="onMouseOverOut()"
+    (mouseover)="onMouseOverOut()"
+    [class.highlight]= "isMouseOver">passe o mouse em cima</span>
+  </article>
+  
+  
+</section>-->
+  <!--<section class="two-way-binding">
+    <article>
+      <h3>Two way data binding</h3>
+      <div>
+        
+        <input type="text"
+          [value]="nome" (input)="nome =$event.target.value">
+
+          MELHOR JEITO, JEITO DO ANGULAR banana na caixa (evento) [propriedade] {{interpolação = valor}}
+          <input type="text" [(ngModel)] ="nome"/>
+
+          <p>Você digitou o nome: {{ nome }}</p>
+           <input type="text" [(ngModel)]="pessoa.nome">
+           <p>teste: {{ pessoa.nome }}</p>
+
+         
+      </div>
+    </article>
+    
+  </section>-->
+  <section class="input-output-properties">
+    <article>
+      <h3>Input/output Properties</h3>
+      <app-curso [nome]='nomeDoCurso'></app-curso><!-- input/output são propriedades diferentes das diretivas-->
+
+      <!--<contador valor="10"></contador>-->
+      <contador [valor]="valorinicial" (mudouValor)="onMudouValor($event)">
+      </contador> <!--usando property do angular "[]" e um evento "()"feito por mim mudou valor-->
+    
+    </article>
+  </section>
+
+</body>
+</html>
